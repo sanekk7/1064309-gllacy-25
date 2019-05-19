@@ -11,16 +11,63 @@
     <a class="main-header-logo"><img src="img/logo.svg" alt="логотип gllacy" width="154" height="64"></a>
     <nav class="main-navigation">
       <ul class="site-navigation">
-        <li><a href="contacts.html">Каталог</a> </li>
+        <li><a href="contacts.html">Каталог</a>
+          <ul class="submenu">
+            <li><a>Новинки</a> </li>
+            <li><a href="">Сливочное</a></li>
+            <li><a href="">Щербеты</a></li>
+            <li><a href="">Фруктовый лед</a></li>
+            <li><a href="">Мелорин</a> </li>
+          </ul>
+        </li>
         <li><a href="delivery.html">Доствка и оплата</a> </li>
         <li><a href="company.html">О Компании</a> </li>
       </ul>
     </nav>
     <ul class="user-navigation">
-      <li class="link-search"><img src="img/loupe.svg" alt="поиск" width="8" height="8">Поиск</li>
-      <li class="link-login"><img src="img/entrance.svg" alt="вход" width="21" height="19">Вход</li>
-      <li class="button-basket"><img src="img/basket.svg" alt="корзина" width="21" height="20">Корзина</li>
+      <li class="link-search">
+        <form>
+        <button type="submit">Поиск<img src="img/loupe.svg" alt="поиск" width="8" height="8"></button>
+        </form>
+      <li>
+      <li class="link-login">
+        <form>
+          <button type="submit">Вход<img src="img/entrance.svg" alt="вход" width="21" height="19">
+          </button>
+        </form>
+      </li>
+      <li class="button-basket">
+        <form>
+          <button type="submit">Корзина<img src="img/basket.svg" alt="корзина" width="21" height="20">
+          </button>
+        </form>
+      </li>
     </ul>
+    <form class="search-form" action="/echo" method="post">
+      <input type="search" name="search" id="search" placeholder="Поиск">
+    </form>
+    <form class="feedback" action="/echo" method="post">
+      <fieldset>
+        <legend>Мы обязательно вам ответим!</legend>
+        <input type="text" name="text" id="text" placeholder="Как Вас зовут">
+        <input type="email" name="email" placeholder="Ваша почта для ответа?">
+        <textarea name="textarea" id="textarea" placeholder="Ваша почта для ответа?"></textarea>
+        <input type="submit" name="submit" id="submit" value="Отправить">
+    </fieldset>
+    </form>
+    <form class="entrance" action="/echo" method="post">
+      <fieldset>
+        <input type="email" name="email" placeholder="Электронная почта">
+        <input type="password" name="password" id="password-field" placeholder="Пароль">
+        <input type="button" name="button" id="button" value="Войти">
+      <div class="entrance">
+        <ul class="entrance-link">
+          <li><a href="">Забыли пароль?</a></li>
+          <li><a href="">Новая регистрация</a></li>
+        </ul>
+      </div>
+    </fieldset>
+    </form>
   </header>
   <main class="container">
     <section class="main description">
@@ -62,7 +109,10 @@
       <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
         что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
       </p>
-      <button class="subscribe-button">Отправить</button>
+      <form class="subscribe-mail" action="/echo" method="post">
+        <input type="email" name="email">
+        <input type="submit" name="submitmail" id="submitmail" value="Отправить">
+      </form>
     </section>
     <div class="maps">
       <img src="img/maps.jpg" alt="карта" width="1200" height="430">
