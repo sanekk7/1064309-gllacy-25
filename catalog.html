@@ -27,37 +27,42 @@
     </nav>
     <ul class="user-navigation">
       <li class="link-search">
-        <form>
-          <button type="submit">Поиск<img src="img/loupe.svg" alt="поиск" width="8" height="8"></button>
+        <span>Поиск</span>
+        <form class="search form">
+        <input type="text" name="text search" placeholder="Что ищем?">
         </form>
-      </li>
+        </li>
       <li class="link-login">
-        <form>
-          <button type="submit">Вход<img src="img/entrance.svg" alt="вход" width="21" height="19"></button>
+        <span>Вход</span>
+        <form class="login form">
+          <input type="email" name="email" placeholder="Электронная почта">
+          <input type="password" name="password" id="password-field" placeholder="Пароль">
+          <input type="button" name="button" id="button" value="Войти">
+          <div class="entrance">
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Новая регистрация</a>
+          </div>
         </form>
       </li>
       <li class="button-basket">
-        <form><button type="submit">Корзина<img src="img/basket.svg" alt="корзина" width="21" height="20"></button>
-        </form>
+        <a href="#"><img src="img/basket.svg" alt="корзина" width="21" height="20">Корзина</a>
         <div class="order">
           <table>
             <tr>
-              <th><button type="button" name="button close order">X</button></th>
+              <th><button type="button" name="button close order"><img src="img/close.svg" width="11px" height="11px" alt="Закрыть заказ"></button></th>
               <th><p><img src="" alt="" width="33" height="33"> Пломбир с апельсиновым джемом</p></th>
               <th>1,5кг*<span>200руб</span></th>
               <th>300руб</th>
             </tr>
             <tr>
-              <th><button type="button" name="button close order">X</button></th>
+              <th><button type="button" name="button close order"><img src="img/close.svg" width="11px" height="11px" alt="Закрыть заказ"></button></th>
               <th><p><img src="" alt="" width="33" height="33"> Клубничный пломбир с присыпкой из белого шоколада</p></th>
               <th>1,5кг*<span>300руб</span></th>
               <th>450руб</th>
             </tr>
           </table>
-          <div>
-            <p>Итого 750 руб</p>
-          </div>
-          <form><button type="submit" name="submit-order">Офорить заказ</form>
+          <p><b>Итого 750 руб</b></p>
+          <a href="#"><b>Офорить заказ</b></a>
         </div>
       </li>
     </ul>

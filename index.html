@@ -26,8 +26,9 @@
     </nav>
     <ul class="user-navigation">
       <li class="link-search">
+        <span>Поиск</span>
         <form class="search form">
-        <button type="submit">Поиск<img src="img/loupe.svg" alt="поиск" width="8" height="8"></button>
+        <input type="text" name="text search" placeholder="Что ищем?">
         </form>
       </li>
       <li class="link-login">
@@ -43,15 +44,9 @@
         </form>
       </li>
       <li class="button-basket">
-        <form class="form basket">
-          <button type="submit">Корзина<img src="img/basket.svg" alt="корзина" width="21" height="20">
-          </button>
-        </form>
+        <a href="#"><img src="img/basket.svg" alt="корзина" width="21" height="20">Корзина</a>
       </li>
     </ul>
-    <form class="search-form" action="/echo" method="post">
-      <input type="search" name="search" id="search" placeholder="Поиск">
-    </form>
   </header>
   <main class="container">
     <section class="main description">
@@ -123,14 +118,15 @@
   </footer>
   <div class="feedback">
     <p>Мы обязательо вам ответим</p>
-    <button class="close feedback">X</button>
-  <form class="feedback form" action="/echo" method="post">
+    <button type="button" class="close feedback"><img src="img/close.svg" width="11px" height="11px" alt="закрыть форму обратной связи">
+    </button>
+    <form class="feedback form" action="/echo" method="post">
       <input type="text" name="text" id="text" placeholder="Как Вас зовут">
       <input type="email" name="email" placeholder="Ваша почта для ответа?">
-      <textarea name="textarea" id="textarea" placeholder="Ваша почта для ответа?"></textarea>
+      <textarea name="textarea" id="textarea" placeholder="Напишите что-нибудь"></textarea>
       <input type="submit" name="submit" id="submit" value="Отправить">
-  </form>
-</div>
+    </form>
+  </div>
 </body>
 
 </html>
